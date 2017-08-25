@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SortingAlgorithmBoot
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         
+         //used a lambda expression to analyze the sorting process
+
+            List<string> programmersBootCamp = new List<string>();
+            programmersBootCamp.Add("De-Paule");
+            programmersBootCamp.Add("Kitan");
+            programmersBootCamp.Add("Fishi");
+            programmersBootCamp.Add("Simi");
+            programmersBootCamp.Add("Flickz");
+            programmersBootCamp.Add("DamiFaj");
+            programmersBootCamp.Add("Airvee");
+            programmersBootCamp.Add("Any other programmer mentioned in the house");
+
+        
+
+            //lets sort the programmers according to their first letter of their nicknameas
+            //using a lambda expression
+            programmersBootCamp.Sort((a, b) => (a[0].CompareTo(b[0])));
+
+            Console.WriteLine("SORTED BY FIRST LETTER");
+            foreach (var resultLabel in programmersBootCamp)
+            {
+                Console.WriteLine(resultLabel);
+
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
